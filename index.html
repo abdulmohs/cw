@@ -1,0 +1,1119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creation Worlds</title>
+    <link rel="stylesheet" href="./src/output.css">
+    <!-- <script src="https://cdn.tailwindcss.com"></script> -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss/dist/tailwind.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <style>
+      .mega-menu {
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(-10px);
+        transition: all 0.3s ease;
+      }
+
+      .nav-item:hover .mega-menu {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+      }
+
+      .arrow-animation {
+        position: relative;
+        display: inline-block;
+      }
+
+      .arrow-animation:after {
+        content: '→';
+        position: absolute;
+        opacity: 0;
+        right: -20px;
+        transition: all 0.3s ease;
+      }
+
+      .group:hover .arrow-animation:after {
+        opacity: 1;
+        right: -25px;
+      }
+
+      /* Mobile menu animation */
+      .mobile-menu-enter {
+        opacity: 0;
+        transform: translateY(-10px);
+      }
+
+      .mobile-menu-enter-active {
+        opacity: 1;
+        transform: translateY(0);
+        transition: opacity 0.3s, transform 0.3s;
+      }
+
+      .mobile-menu-exit {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      .mobile-menu-exit-active {
+        opacity: 0;
+        transform: translateY(-10px);
+        transition: opacity 0.3s, transform 0.3s;
+      }
+
+      /* Gradient Logo Animation */
+      .gradient-text {
+        background: linear-gradient(to right, #00E392, #00B4CD, #6754FF);
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+        background-size: 200% auto;
+        animation: shine 3s linear infinite;
+      }
+
+      @keyframes shine {
+        to {
+          background-position: 200% center;
+        }
+      }
+    </style>
+
+  </head>
+
+  <body>
+    <header class="bg-black text-white fixed w-full z-50">
+      <div class="max-w-7xl mx-auto px-4">
+        <!-- Top Bar -->
+        <div class="flex items-center justify-between h-16">
+          <!-- Logo -->
+          <div class="flex-shrink-0">
+            <a href="/" class="text-2xl font-bold gradient-text">Creation Worlds</a>
+          </div>
+
+          <!-- Desktop Navigation -->
+          <nav class="hidden lg:flex space-x-8">
+            <!-- Solutions Dropdown -->
+            <div class="nav-item  group">
+              <button class="flex items-center space-x-2 py-4">
+                <span>Solutions</span>
+                <svg class="w-4 h-4 transition-transform group-hover:rotate-180" fill="none" stroke="currentColor"
+                  viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                </svg>
+              </button>
+
+              <!-- Mega Menu -->
+              <div class="mega-menu absolute left-0 w-screen bg-black border-t border-gray-800">
+                <div class="max-w-7xl mx-auto grid grid-cols-4 gap-8 p-8">
+                  <!-- Start Section -->
+                  <div>
+                    <h3 class="text-lg font-semibold mb-4">Marketing Essentials</h3>
+                    <ul class="space-y-4">
+                      <li>
+                        <a href="#" class="group">
+                          <div class="text-base font-medium">
+                            <span class="arrow-animation">Business Cards</span>
+                          </div>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#" class="group">
+                          <div class="text-base font-medium">
+                            <span class="arrow-animation">Flyers & Brochures</span>
+                          </div>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#" class="group">
+                          <div class="text-base font-medium">
+                            <span class="arrow-animation">Postcards</span>
+                          </div>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#" class="group">
+                          <div class="text-base font-medium">
+                            <span class="arrow-animation">Letterheads</span>
+                          </div>
+                        </a>
+                      </li>
+
+                    </ul>
+                  </div>
+
+                  <!-- Sell Section -->
+                  <div>
+                    <h3 class="text-lg font-semibold mb-4">Packaging Solutions</h3>
+                    <ul class="space-y-4">
+                      <li>
+                        <a href="#" class="group">
+                          <div class="text-base font-medium">
+                            <span class="arrow-animation">Custom Boxes</span>
+                          </div>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#" class="group">
+                          <div class="text-base font-medium">
+                            <span class="arrow-animation">Product Packaging</span>
+                          </div>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#" class="group">
+                          <div class="text-base font-medium">
+                            <span class="arrow-animation">Gift Boxes</span>
+                          </div>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#" class="group">
+                          <div class="text-base font-medium">
+                            <span class="arrow-animation">Shopping Bags</span>
+                          </div>
+                        </a>
+                      </li>
+
+                    </ul>
+                  </div>
+
+                  <!-- Market Section -->
+                  <div>
+                    <h3 class="text-lg font-semibold mb-4">Large Format</h3>
+                    <ul class="space-y-4">
+                      <li>
+                        <a href="#" class="group">
+                          <div class="text-base font-medium">
+                            <span class="arrow-animation">Banners & Posters</span>
+                          </div>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#" class="group">
+                          <div class="text-base font-medium">
+                            <span class="arrow-animation">Signage</span>
+                          </div>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#" class="group">
+                          <div class="text-base font-medium">
+                            <span class="arrow-animation">Wall Graphics/Arts</span>
+                          </div>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#" class="group">
+                          <div class="text-base font-medium">
+                            <span class="arrow-animation">Vehicle Wraps/Branding</span>
+                          </div>
+                        </a>
+                      </li>
+
+                    </ul>
+                  </div>
+
+                  <!-- Manage Section -->
+                  <div>
+                    <h3 class="text-lg font-semibold mb-4">Corporate Uplifting</h3>
+                    <ul class="space-y-4">
+                      <li>
+                        <a href="#" class="group">
+                          <div class="text-base font-medium">
+                            <span class="arrow-animation">Corporate Branding</span>
+                          </div>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#" class="group">
+                          <div class="text-base font-medium">
+                            <span class="arrow-animation">Corporate Packaging</span>
+                          </div>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <a href="#" class="py-4 hover:text-gray-300">Enterprise</a>
+          </nav>
+
+          <!-- Desktop CTA -->
+          <div class="hidden lg:flex items-center space-x-8">
+            <a href="tel:+919550887200"
+              class="bg-white text-black px-4 py-2 rounded-md hover:bg-gray-200 transition-colors">
+              Contact Sales
+            </a>
+          </div>
+
+          <!-- Mobile Menu Button -->
+          <button class="lg:hidden p-2" onclick="document.getElementById('mobile-menu').classList.toggle('hidden')">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <!-- Mobile Menu -->
+      <div id="mobile-menu" class="hidden lg:hidden">
+        <div class="max-w-7xl mx-auto grid grid-cols-4 gap-8 p-8">
+          <!-- Start Section -->
+          <div>
+            <h3 class="text-lg font-semibold mb-4">Marketing Essentials</h3>
+            <ul class="space-y-4">
+              <li>
+                <a href="#" class="group">
+                  <div class="text-base font-medium">
+                    <span class="arrow-animation">Business Cards</span>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a href="#" class="group">
+                  <div class="text-base font-medium">
+                    <span class="arrow-animation">Flyers & Brochures</span>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a href="#" class="group">
+                  <div class="text-base font-medium">
+                    <span class="arrow-animation">Postcards</span>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a href="#" class="group">
+                  <div class="text-base font-medium">
+                    <span class="arrow-animation">Letterheads</span>
+                  </div>
+                </a>
+              </li>
+
+            </ul>
+          </div>
+
+          <!-- Sell Section -->
+          <div>
+            <h3 class="text-lg font-semibold mb-4">Packaging Solutions</h3>
+            <ul class="space-y-4">
+              <li>
+                <a href="#" class="group">
+                  <div class="text-base font-medium">
+                    <span class="arrow-animation">Custom Boxes</span>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a href="#" class="group">
+                  <div class="text-base font-medium">
+                    <span class="arrow-animation">Product Packaging</span>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a href="#" class="group">
+                  <div class="text-base font-medium">
+                    <span class="arrow-animation">Gift Boxes</span>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a href="#" class="group">
+                  <div class="text-base font-medium">
+                    <span class="arrow-animation">Shopping Bags</span>
+                  </div>
+                </a>
+              </li>
+
+            </ul>
+          </div>
+
+          <!-- Market Section -->
+          <div>
+            <h3 class="text-lg font-semibold mb-4">Large Format</h3>
+            <ul class="space-y-4">
+              <li>
+                <a href="#" class="group">
+                  <div class="text-base font-medium">
+                    <span class="arrow-animation">Banners & Posters</span>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a href="#" class="group">
+                  <div class="text-base font-medium">
+                    <span class="arrow-animation">Signage</span>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a href="#" class="group">
+                  <div class="text-base font-medium">
+                    <span class="arrow-animation">Wall Graphics/Arts</span>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a href="#" class="group">
+                  <div class="text-base font-medium">
+                    <span class="arrow-animation">Vehicle Wraps/Branding</span>
+                  </div>
+                </a>
+              </li>
+
+            </ul>
+          </div>
+
+          <!-- Manage Section -->
+          <div>
+            <h3 class="text-lg font-semibold mb-4">Corporate Uplifting</h3>
+            <ul class="space-y-4">
+              <li>
+                <a href="#" class="group">
+                  <div class="text-base font-medium">
+                    <span class="arrow-animation">Corporate Branding</span>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a href="#" class="group">
+                  <div class="text-base font-medium">
+                    <span class="arrow-animation">Corporate Packaging</span>
+                  </div>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="px-4 py-2 space-y-1 bg-black">
+          <a href="#" class="block px-3 py-2 hover:bg-gray-900 rounded-md">Solutions</a>
+          <a href="#" class="block px-3 py-2 hover:bg-gray-900 rounded-md">Pricing</a>
+          <a href="#" class="block px-3 py-2 hover:bg-gray-900 rounded-md">Resources</a>
+          <a href="#" class="block px-3 py-2 hover:bg-gray-900 rounded-md">Enterprise</a>
+          <div class="pt-4 border-t border-gray-800">
+            <a href="#" class="block px-3 py-2 hover:bg-gray-900 rounded-md">Log in</a>
+            <a href="#" class="block px-3 py-2 mt-2 text-center bg-white text-black rounded-md hover:bg-gray-200">
+              Start free trial
+            </a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Rest of the content remains the same -->
+    <!-- Hero Section with Alpine.js Slider -->
+    <div class=" bg-orange-500 overflow-hidden" x-data="{ currentSlide: 0 }">
+      <div class="max-w-7xl mx-auto relative">
+        <div class="relative z-10 pb-8 sm:pb-16 md:pb-20 lg:pb-28 xl:pb-32">
+          <div class="mt-10 mx-auto max-w-7xl px-4 sm:mt-12 sm:px-6 md:mt-16 lg:mt-20 lg:px-8 xl:mt-28">
+            <div class="text-center">
+              <h1 class="text-4xl tracking-tight font-extrabold text-white sm:text-5xl md:text-6xl">
+                <span class="block">MAKE THIS</span>
+                <span class="block text-yellow-100">Season</span>
+                <span class="block text-2xl mt-3 font-normal">Memorable WITH CUSTOM CREATIONS</span>
+              </h1>
+
+              <div class="mt-8 flex flex-wrap justify-center gap-4">
+                <div class="bg-white/90 rounded-lg p-4 text-center">
+
+                </div>
+
+                <div class="bg-white/90 rounded-lg p-4 text-center">
+
+                </div>
+
+                <div class="bg-white/90 rounded-lg p-4 text-center">
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Popular Products -->
+    <main class="max-w-7xl mx-auto px-4 sm:px-9 lg:px-8 py-12">
+      <h2 class="text-2xl font-semibold text-gray-900 text-center mb-8">
+        Most Popular Products
+      </h2>
+
+      <div class="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-6">
+        <!-- Product Card 1 -->
+        <div class="bg-white rounded-lg shadow-sm overflow-hidden transition-transform hover:scale-105">
+          <div class="aspect-square overflow-hidden">
+            <img
+              src="https://images.unsplash.com/photo-1586287011575-a23134f797f9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60"
+              alt="ID Cards" class="w-full h-full object-cover">
+          </div>
+          <div class="p-4">
+            <h3 class="text-center font-medium text-gray-800">ID Cards & Accessories</h3>
+            <p class="text-center text-sm text-gray-500 mt-1">As low as ₹18</p>
+          </div>
+        </div>
+
+        <!-- Product Card 2 -->
+        <div class="bg-white rounded-lg shadow-sm overflow-hidden transition-transform hover:scale-105">
+          <div class="aspect-square overflow-hidden">
+            <img
+              src="https://images.unsplash.com/photo-1577375729152-4c8b5fcda381?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60"
+              alt="Diaries" class="w-full h-full object-cover">
+          </div>
+          <div class="p-4">
+            <h3 class="text-center font-medium text-gray-800">Diaries</h3>
+            <p class="text-center text-sm text-gray-500 mt-1">As low as ₹65</p>
+          </div>
+        </div>
+
+        <!-- Product Card 3 -->
+        <div class="bg-white rounded-lg shadow-sm overflow-hidden transition-transform hover:scale-105">
+          <div class="aspect-square overflow-hidden">
+            <img
+              src="https://images.unsplash.com/photo-1514228742587-6b1558fcca3d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60"
+              alt="Welcome Kit" class="w-full h-full object-cover">
+          </div>
+          <div class="p-4">
+            <h3 class="text-center font-medium text-gray-800">Welcome Kit</h3>
+            <p class="text-center text-sm text-gray-500 mt-1">As low as ₹796</p>
+          </div>
+        </div>
+
+        <!-- Product Card 4 -->
+        <div class="bg-white rounded-lg shadow-sm overflow-hidden transition-transform hover:scale-105">
+          <div class="aspect-square overflow-hidden">
+            <img
+              src="https://images.unsplash.com/photo-1514228742587-6b1558fcca3d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60"
+              alt="Drinkwares" class="w-full h-full object-cover">
+          </div>
+          <div class="p-4">
+            <h3 class="text-center font-medium text-gray-800">Drinkwares</h3>
+            <p class="text-center text-sm text-gray-500 mt-1">As low as ₹165</p>
+          </div>
+        </div>
+
+        <!-- Product Card 5 -->
+        <div class="bg-white rounded-lg shadow-sm overflow-hidden transition-transform hover:scale-105">
+          <div class="aspect-square overflow-hidden">
+            <img
+              src="https://images.unsplash.com/photo-1553062407-98eeb64c6a62?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60"
+              alt="Bags" class="w-full h-full object-cover">
+          </div>
+          <div class="p-4">
+            <h3 class="text-center font-medium text-gray-800">Bags</h3>
+            <p class="text-center text-sm text-gray-500 mt-1">As low as ₹65</p>
+          </div>
+        </div>
+      </div>
+    </main>
+
+
+    <!-- Clients Section -->
+    <section class="py-12 md:py-16 bg-white">
+      <div class="container mx-auto px-4">
+        <h2 class="text-2xl md:text-3xl font-bold text-center text-gray-900 mb-6 md:mb-8 max-w-3xl mx-auto">
+          Trusted by Large Enterprises for Printing, Signage and Gifting Needs.
+        </h2>
+
+        <!-- CTA Button -->
+        <div class="text-center mb-12">
+          <a href="#"
+            class="inline-block bg-orange-500 text-white px-6 py-3 rounded-lg hover:bg-orange-600 transition-colors duration-200 text-lg font-medium">
+            Meet our corporate clients
+          </a>
+        </div>
+
+        <!-- Logos Grid -->
+        <div
+          class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 md:gap-12 items-center justify-items-center max-w-6xl mx-auto">
+          <!-- Row 1 -->
+          <img src="/img/malabar.png" alt="malabar" class="h-auto w-full">
+          <img src="/img/cmr.jpg" alt="Accenture" class="h-auto w-full">
+          <img src="/img/mangatrai.png" alt="Bosch" class="h-auto w-full">
+          <img src="/img/psatya.jpg" alt="HP" class="h-auto w-full">
+          <img src="/img/alharamain.png" alt="Honda" class="h-auto w-full">
+          <img src="/img/asma.jpg" alt="Bosch" class="h-auto w-full">
+          <img src="/img/bmj.jpg" alt="HP" class="h-auto w-full">
+          <img src="/img/rasasi.jpg" alt="Honda" class="h-auto w-full">
+
+
+
+          <div class="h-8 md:h-10"></div> <!-- Empty div for grid alignment -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Categories Section -->
+    <section id="categories" class="py-16">
+      <div class="container mx-auto px-4">
+        <h2 class="text-3xl font-bold text-center mb-12">Our Print Categories</h2>
+
+        <div class="grid md:grid-cols-6 gap-3">
+          <!-- Marketing Essentials -->
+          <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1541696432-82c6da8ce7bf" alt="Marketing Essentials"
+              class="w-full h-32 object-cover">
+            <div class="p-4">
+              <h3 class="text-xl font-semibold mb-4">Marketing Essentials</h3>
+              <ul class="space-y-2 text-gray-600 mb-6">
+                <li>Business Cards</li>
+                <li>Flyers & Brochures</li>
+                <li>Postcards</li>
+                <li>Letterheads</li>
+              </ul>
+
+            </div>
+          </div>
+
+          <!-- Packaging Solutions -->
+          <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1607344645866-009c320b63e0" alt="Packaging Solutions"
+              class="w-full h-32 object-cover">
+            <div class="p-4">
+              <h3 class="text-xl font-semibold mb-4">Packaging Solutions</h3>
+              <ul class="space-y-2 text-gray-600 mb-6">
+                <li>Custom Boxes</li>
+                <li>Product Packaging</li>
+                <li>Gift Boxes</li>
+                <li>Shopping Bags</li>
+              </ul>
+
+            </div>
+          </div>
+
+          <!-- Large Format -->
+          <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1588412079929-790b9f593d8e" alt="Large Format"
+              class="w-full h-32 object-cover">
+            <div class="p-4">
+              <h3 class="text-xl font-semibold mb-4">Large Format</h3>
+              <ul class="space-y-2 text-gray-600 mb-6">
+                <li>Banners & Posters</li>
+                <li>Signage</li>
+                <li>Wall Graphics</li>
+                <li>Vehicle Wraps</li>
+              </ul>
+
+            </div>
+          </div>
+
+          <!-- Corporate Gifts -->
+          <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1513885535751-8b9238bd345a" alt="Corporate Gifts"
+              class="w-full h-32 object-cover">
+            <div class="p-4">
+              <h3 class="text-xl font-semibold mb-4">Corporate Gifts</h3>
+              <ul class="space-y-2 text-gray-600 mb-6">
+                <li>Branded Merchandise</li>
+                <li>Custom Apparel</li>
+                <li>Promotional Items</li>
+                <li>Awards & Trophies</li>
+              </ul>
+
+            </div>
+          </div>
+
+          <!-- Office Supplies -->
+          <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1497032628192-86f99bcd76bc" alt="Office Supplies"
+              class="w-full h-32 object-cover">
+            <div class="p-4">
+              <h3 class="text-xl font-semibold mb-4">Office Supplies</h3>
+              <ul class="space-y-2 text-gray-600 mb-6">
+                <li>Notebooks & Diaries</li>
+                <li>Calendars</li>
+                <li>Office Stationery</li>
+                <li>Filing Solutions</li>
+              </ul>
+
+            </div>
+          </div>
+
+          <!-- Event Materials -->
+          <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1492684223066-81342ee5ff30" alt="Event Materials"
+              class="w-full h-32 object-cover">
+            <div class="p-4">
+              <h3 class="text-xl font-semibold mb-4">Event Materials</h3>
+              <ul class="space-y-2 text-gray-600">
+                <li>Invitations</li>
+                <li>Badges & Lanyards</li>
+                <li>Event Signage</li>
+                <li>Backdrop Displays</li>
+              </ul>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="py-16 bg-gray-100">
+      <div class="container mx-auto px-4">
+        <h2 class="text-3xl font-bold text-center mb-12">Why Choose Us</h2>
+        <div class="grid md:grid-cols-4 gap-8">
+          <div class="text-center">
+            <div class="bg-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg">
+              <svg class="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+              </svg>
+            </div>
+            <h3 class="text-xl font-semibold mb-2">Fast Turnaround</h3>
+            <p class="text-gray-600">Quick delivery on all orders</p>
+          </div>
+
+          <div class="text-center">
+            <div class="bg-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg">
+              <svg class="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+            </div>
+            <h3 class="text-xl font-semibold mb-2">Quality Guaranteed</h3>
+            <p class="text-gray-600">Premium quality prints</p>
+          </div>
+
+          <div class="text-center">
+            <div class="bg-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg">
+              <svg class="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2" />
+              </svg>
+            </div>
+            <h3 class="text-xl font-semibold mb-2">Competitive Pricing</h3>
+            <p class="text-gray-600">Best rates guaranteed</p>
+          </div>
+
+          <div class="text-center">
+            <div class="bg-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg">
+              <svg class="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192l-3.536 3.536" />
+              </svg>
+            </div>
+            <h3 class="text-xl font-semibold mb-2">24/7 Support</h3>
+            <p class="text-gray-600">Always here to help</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="py-12 bg-white">
+      <div class="container mx-auto px-4">
+        <h2 class="text-2xl md:text-3xl font-bold text-center text-[#000066] mb-8">
+          Cities we cover!
+        </h2>
+
+        <div class="flex flex-nowrap overflow-x-auto pb-3 gap-6 md:gap-3 justify-center space-x-4">
+          <!-- Mumbai -->
+          <div class="flex-none">
+            <div class="text-center hover:shadow-md transition-shadow">
+              <img src="\img\mumbai.svg" alt="hyderabad" srcset=" " class="w-full h-20 object-cover rounded-md mb-2" />
+              <p class="text-xs md:text-sm font-medium text-gray-700">MUMBAI</p>
+            </div>
+          </div>
+
+          <!-- Bengaluru -->
+          <div class="flex-none ">
+            <div class="text-center hover:shadow-md transition-shadow">
+              <img src="\img\bangalore.svg" alt="hyderabad" srcset=" "
+                class="w-full h-20 object-cover rounded-md mb-2" />
+              <p class="text-xs md:text-sm font-medium text-gray-700">BENGALURU</p>
+            </div>
+          </div>
+
+          <!-- Chennai -->
+          <div class="flex-none">
+            <div class="text-center hover:shadow-md transition-shadow">
+              <img src="\img\chennai.svg" alt="hyderabad" srcset=" " class="w-full h-20 object-cover rounded-md mb-2" />
+              <p class="text-xs md:text-sm font-medium text-gray-700">CHENNAI</p>
+            </div>
+          </div>
+
+
+          <!-- Noida -->
+          <div class="flex-none">
+            <div class="text-center hover:shadow-md transition-shadow">
+              <img src="\img\delhi.svg" alt="hyderabad" srcset=" " class="w-full h-20 object-cover rounded-md mb-2" />
+              <p class="text-xs md:text-sm font-medium text-gray-700">DELHI</p>
+            </div>
+          </div>
+
+
+          <!-- Delhi -->
+          <div class="flex-none">
+            <div class="text-center hover:shadow-md transition-shadow">
+              <img src="\img\hyderabad.svg" alt="hyderabad" srcset=" "
+                class="w-full h-20 object-cover rounded-md mb-2" />
+              <p class="text-xs md:text-sm font-medium text-gray-700">HYDERABAD</p>
+            </div>
+          </div>
+
+          <!-- Kolkata -->
+          <div class="flex-none">
+            <div class="text-center hover:shadow-md transition-shadow">
+              <img src="\img\kolkata.svg" alt="hyderabad" srcset=" " class="w-full h-20 object-cover rounded-md mb-2" />
+              <p class="text-xs md:text-sm font-medium text-gray-700">KOLKATA</p>
+            </div>
+          </div>
+
+          <!-- Hyderabad -->
+          <div class="flex-none">
+            <div class="text-center hover:shadow-md transition-shadow">
+              <img src="\img\kerala.svg" alt="hyderabad" srcset=" " class="w-full h-20 object-cover rounded-md mb-2" />
+              <p class="text-xs md:text-sm font-medium text-gray-700">KERALA</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Contact Section -->
+    <!-- Footer -->
+    <footer class="bg-[#190019] text-white py-12">
+      <div class="container mx-auto px-4">
+        <div class="py-12">
+          <div class="mx-auto">
+            <div class="max-w-7xxl mx-auto">
+              <h2 class="text-2xl font-bold text-rose-500 mb-6">Services We Offer</h2>
+
+              <!-- Fashion Section -->
+              <div class="mb-3">
+                <div class="flex flex-wrap gap-2 items-center">
+                  <span class="text-gray-400">Pre-Printing Services :</span>
+                  <a href="#" class="hover:text-rose-500">Consultation Services</a>
+                  <span class="text-gray-600">|</span>
+                  <a href="#" class="hover:text-rose-500">Graphic Design</a>
+                  <span class="text-gray-600">|</span>
+                  <a href="#" class="hover:text-rose-500">Proofing </a>
+                  <span class="text-gray-600">|</span>
+                  <a href="#" class="hover:text-rose-500">File Preparation</a>
+                  <span class="text-gray-600">|</span>
+                  <a href="#" class="hover:text-rose-500">Pre-Press Services</a>
+                  <span class="text-gray-600">|</span>
+                  <a href="#" class="hover:text-rose-500">Digital Proofing</a>
+                </div>
+              </div>
+
+              <!-- Footwear Section -->
+              <div class="mb-3">
+                <div class="flex flex-wrap gap-2 items-center">
+                  <span class="text-gray-400">Printing Services :</span>
+                  <a href="#" class="hover:text-rose-500">Offset Printing</a>
+                  <span class="text-gray-600">|</span>
+                  <a href="#" class="hover:text-rose-500">Digital Printing</a>
+                  <span class="text-gray-600">|</span>
+                  <a href="#" class="hover:text-rose-500">Large Format Printing</a>
+                  <span class="text-gray-600">|</span>
+                  <a href="#" class="hover:text-rose-500">Screen Printing</a>
+                  <span class="text-gray-600">|</span>
+                  <a href="#" class="hover:text-rose-500">Flexographic Printing</a>
+                  <span class="text-gray-600">|</span>
+                  <a href="#" class="hover:text-rose-500">3D Printing</a>
+                </div>
+              </div>
+
+              <!-- Jewellery Section -->
+              <div class="mb-3">
+                <div class="flex flex-wrap gap-2 items-center">
+                  <span class="text-gray-400">Post-Printing Services :</span>
+                  <a href="#" class="hover:text-rose-500">Finishing Services</a>
+                  <span class="text-gray-600">|</span>
+                  <a href="#" class="hover:text-rose-500">Lamination </a>
+                  <span class="text-gray-600">|</span>
+                  <a href="#" class="hover:text-rose-500">Embossing/Debossing</a>
+                  <span class="text-gray-600">|</span>
+                  <a href="#" class="hover:text-rose-500">Die Cutting</a>
+                  <span class="text-gray-600">|</span>
+                  <a href="#" class="hover:text-rose-500">Crystal</a>
+                  <span class="text-gray-600">|</span>
+                  <a href="#" class="hover:text-rose-500">Packaging</a>
+                </div>
+              </div>
+
+
+            </div>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-5 gap-6 mt-20">
+            <!-- Products Column -->
+            <div class="space-y-4">
+              <h3 class="text-rose-600 font-semibold text-lg mb-6">Our Daily Needs Services</h3>
+              <div class="grid grid-cols-1 gap-2">
+                <a href="#" class="text-gray-400 hover:text-blue-600">Brochures</a>
+                <a href="#" class="text-gray-400 hover:text-blue-600">Stickers</a>
+                <a href="#" class="text-gray-400 hover:text-blue-600">Posters</a>
+                <a href="#" class="text-gray-400 hover:text-blue-600">Banners</a>
+                <a href="#" class="text-gray-400 hover:text-blue-600">Certificates</a>
+                <a href="#" class="text-gray-400 hover:text-blue-600">Notebooks</a>
+                <a href="#" class="text-gray-400 hover:text-blue-600">Envelopes</a>
+
+              </div>
+            </div>
+
+            <!-- Second Column -->
+            <div class="space-y-4">
+              <h3 class="text-gray-400 font-semibold text-lg mb-6">&nbsp;</h3>
+              <div class="grid grid-cols-1 gap-2">
+                <a href="#" class="text-gray-400 hover:text-blue-600">Packaging & Labels</a>
+                <a href="#" class="text-gray-400 hover:text-blue-600">Laptop sleeves</a>
+                <a href="#" class="text-gray-400 hover:text-blue-600">Presentation folders</a>
+                <a href="#" class="text-gray-400 hover:text-blue-600">Rubber Stamps</a>
+                <a href="#" class="text-gray-400 hover:text-blue-600">Visiting Cards</a>
+                <a href="#" class="text-gray-400 hover:text-blue-600">Button Badges</a>
+                <a href="#" class="text-gray-400 hover:text-blue-600">Booklets</a>
+
+              </div>
+            </div>
+
+            <!-- Third Column -->
+            <div class="space-y-4">
+              <h3 class="text-gray-400 font-semibold text-lg mb-6">&nbsp;</h3>
+              <div class="grid grid-cols-1 gap-2">
+                <a href="#" class="text-gray-400 hover:text-blue-600">Standees</a>
+                <a href="#" class="text-gray-400 hover:text-blue-600">Invitations</a>
+                <a href="#" class="text-gray-400 hover:text-blue-600">Caps</a>
+                <a href="#" class="text-gray-400 hover:text-blue-600">Coasters</a>
+                <a href="#" class="text-gray-400 hover:text-blue-600">Promotional Pens</a>
+                <a href="#" class="text-gray-400 hover:text-blue-600">Photo frames</a>
+                <a href="#" class="text-gray-400 hover:text-blue-600">Engraved Pens</a>
+
+              </div>
+            </div>
+            <!-- Products Column -->
+            <div class="space-y-4">
+              <h3 class="text-gray-400 font-semibold text-lg mb-6">&nbsp;</h3>
+
+              <div class="grid grid-cols-1 gap-2">
+                <a href="#" class="text-gray-400 hover:text-blue-600">Notepads</a>
+                <a href="#" class="text-gray-400 hover:text-blue-600">Flyers and Leaflets</a>
+                <a href="#" class="text-gray-400 hover:text-blue-600">Mugs</a>
+                <a href="#" class="text-gray-400 hover:text-blue-600">T-Shirts</a>
+                <a href="#" class="text-gray-400 hover:text-blue-600">Letterheads</a>
+                <a href="#" class="text-gray-400 hover:text-blue-600">Calendars</a>
+                <a href="#" class="text-gray-400 hover:text-blue-600">Paper Bags</a>
+
+
+
+              </div>
+            </div>
+
+            <!-- Second Column -->
+            <div class="space-y-4">
+              <h3 class="text-gray-400 font-semibold text-lg mb-6">&nbsp;</h3>
+              <div class="grid grid-cols-1 gap-2">
+                <a href="#" class="text-gray-400 hover:text-blue-600">Lanyards</a>
+                <a href="#" class="text-gray-400 hover:text-blue-600">Fabric Standees</a>
+                <a href="#" class="text-gray-400 hover:text-blue-600">Sweatshirts and Hoodies</a>
+                <a href="#" class="text-gray-400 hover:text-blue-600">Bottles and Sippers</a>
+                <a href="#" class="text-gray-400 hover:text-blue-600">Placemats</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      </div>
+    </footer>
+    <!-- Contact Section -->
+    <section class="bg-gray-900 text-white py-16">
+      <div class="mx-auto px-4 container">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <!-- Contact Information -->
+          <div class="space-y-8">
+            <h2 class="text-3xl font-bold mb-8">Get in Touch</h2>
+
+            <!-- Phone -->
+            <div class="flex items-start space-x-4 contact-link">
+              <i class="fas fa-phone-alt text-blue-400 text-xl mt-1"></i>
+              <div>
+                <p class="font-medium">Call Us</p>
+                <a href="tel:+919160477633" class="text-gray-300 hover:text-white">+91 91604 77633</a>
+                <p class="text-sm text-gray-400">Mon-Fri from 9am to 6pm</p>
+              </div>
+            </div>
+
+            <!-- Email -->
+            <div class="flex items-start space-x-4 contact-link">
+              <i class="fas fa-envelope text-blue-400 text-xl mt-1"></i>
+              <div>
+                <p class="font-medium">Email Us</p>
+                <a href="mailto:support@creationworlds.com"
+                  class="text-gray-300 hover:text-white">support@creationworlds.com</a>
+                <p class="text-sm text-gray-400">We reply within 24 hours</p>
+              </div>
+            </div>
+
+            <!-- Working Hours -->
+            <div class="flex items-start space-x-4 contact-link">
+              <i class="fas fa-clock text-blue-400 text-xl mt-1"></i>
+              <div>
+                <p class="font-medium">Working Hours</p>
+                <p class="text-gray-300">Monday - Friday: 9:00 AM - 6:00 PM</p>
+                <p class="text-gray-300">Saturday: 9:00 AM - 1:00 PM</p>
+                <p class="text-gray-300">Sunday: Closed</p>
+              </div>
+            </div>
+
+            <!-- Quick Contact Buttons -->
+            <div class="flex flex-wrap gap-4 mt-8">
+              <a href="tel:+919550887200"
+                class="quick-contact-btn flex items-center space-x-2 bg-blue-500 hover:bg-blue-600 text-white px-6 py-3 rounded-full">
+                <i class="fas fa-user-tie"></i>
+                <span>Manager</span>
+              </a>
+              <a href="tel:+919550887200"
+                class="quick-contact-btn flex items-center space-x-2 bg-green-500 hover:bg-green-600 text-white px-6 py-3 rounded-full">
+                <i class="fas fa-headset"></i>
+                <span>Support</span>
+              </a>
+              <a href="tel:+919550887200"
+                class="quick-contact-btn flex items-center space-x-2 bg-purple-500 hover:bg-purple-600 text-white px-6 py-3 rounded-full">
+                <i class="fas fa-phone"></i>
+                <span>Sales</span>
+              </a>
+            </div>
+          </div>
+
+
+          <div>
+            <!-- WhatsApp QR Code -->
+            <div class="p-2">
+              <div class="mt-3">
+                <h3 class="text-green-600 font-semibold mb-6"></h3>
+              </div>
+
+              <div class="p-3 text-center w-96">
+                <p class="text-white text-md my-4">Scan to chat on WhatsApp</p>
+                <img alt="Chat on WhatsApp" class="inline-block p-2 rounded bg-white w-40"
+                  src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://wa.me/919160477633" />
+                </a>
+              </div>
+              <div class="p-3 text-center w-96">
+                <p class="text-white text-md my-4">Or click to chat directly</p>
+                <a aria-label="Chat on WhatsApp" href="https://wa.me/919160477633"> <img alt="Chat on WhatsApp"
+                    src="chatonwhatsapp.png" />
+                  <a />
+
+                </a>
+              </div>
+            </div>
+          </div>
+          <!-- Map and WhatsApp Section -->
+          <div class="space-y-8">
+            <div class="flex items-start space-x-3 contact-link">
+              <i class="fas fa-map-marker-alt text-blue-400 text-xl mt-1"></i>
+              <div>
+                <p class="font-medium">Our Location</p>
+                <p class="text-gray-300 mb-2">4-21-47, Mahmood Nagar Rd</p>
+                <p class="text-gray-300">Hyderabad, Telangana 500052</p>
+                <a href="https://maps.app.goo.gl/SK4vsexMxgYVpMfz7" target="_blank"
+                  class="text-blue-400 hover:text-blue-300 text-sm inline-flex items-center mt-2">
+                  <span>Get Directions</span>
+                  <i class="fas fa-arrow-right ml-2 text-xs"></i>
+                </a>
+              </div>
+            </div>
+            <!-- Map -->
+            <div class="rounded overflow-hidden h-[300px]">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d238.02841959952795!2d78.43140147892007!3d17.341839242003974!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb9701d9ee33e7%3A0x11db8601333fb86a!2sCreation%20Worlds!5e0!3m2!1sen!2sin!4v1739421596202!5m2!1sen!2sin"
+                width="350" height="250" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- new footer -->
+    <footer class=" bg-black  text-white relative z-20 print:px-4 print:border-t print:border-black">
+
+      <div class="3xl:px-0 container px-4 mx-auto pt-5 text-center">
+        <div class="lg:block hidden"><a
+            class="BaseButton text-contrast-none print:border print:!border-gray-dark print:text-center -dark inline-block mb-5 mr-8"
+            aria-label="" href="https://www.creationworlds.com/jobs/" target="_blank"><span
+              class="label block">Careers</span></a><a
+            class="BaseButton text-contrast-none print:border print:!border-gray-dark print:text-center -dark inline-block mb-5 mr-8"
+            aria-label="" href="https://www.creationworlds.com/corporate-gifting/" target="_blank"><span
+              class="label block">Corporate
+              Gifting</span></a><a
+            class="BaseButton text-contrast-none print:border print:!border-gray-dark print:text-center -dark inline-block mb-5 mr-8"
+            aria-label="" href="https://www.ambrosandco.com/" target="_blank"><span class="label block">Corporate
+              Packaging</span></a><a
+            class="BaseButton text-contrast-none print:border print:!border-gray-dark print:text-center -dark inline-block mb-5 mr-8"
+            aria-label="" href="https://m8sports.in/" target="_blank"><span class="label block">Sports
+              Store</span></a></div>
+        <div class="lg:hidden auto-col-2">
+          <div><a
+              class="BaseButton text-contrast-none print:border print:!border-gray-dark print:text-center -dark inline-block mb-5 mr-8"
+              aria-label="" href="https://www.creationworlds.com/jobs/" target="_blank"><span
+                class="label block">Careers</span></a><a
+              class="BaseButton text-contrast-none print:border print:!border-gray-dark print:text-center -dark inline-block mb-5 mr-8"
+              aria-label="" href="https://www.creationworlds.com/corporate-gifting/" target="_blank"><span
+                class="label block">Corporate
+                Gifting</span></a><a
+              class="BaseButton text-contrast-none print:border print:!border-gray-dark print:text-center -dark inline-block mb-5 mr-8"
+              aria-label="" href="https://www.ambrosandco.com/" target="_blank"><span class="label block">Corporate
+                Packaging</span></a><a
+              class="BaseButton text-contrast-none print:border print:!border-gray-dark print:text-center -dark inline-block mb-5 mr-8"
+              aria-label="" href="https://m8sports.in/" target="_blank"><span class="label block">Sports
+                Store</span></a></div>
+        </div>
+      </div>
+      <div class="bg-black bg-opacity-40 border-opacity-40 lg:border-t py-2 text-sm border-black">
+        <div class="3xl:px-0 lg:flex lg:flex-wrap lg:px-4 lg:container justify-between mx-auto">
+          <div class="divide-opacity-30 lg:justify-start lg:-ml-4 flex flex-wrap justify-center divide-x divide-white">
+
+            <div class="lg:mb-2 mb-5"><a href="http://www.creationworlds.com/"
+                class="cursor-pointer can-hover:hover:underline inline-block px-4 py-1 font-bold leading-none group"
+                aria-label="">Creation Worlds</a></div>
+            <div class="lg:mb-2 mb-5"><a href="/privacy/"
+                class="nuxt-link-prefetched group cursor-pointer can-hover:hover:underline inline-block px-4 py-1 font-bold leading-none"
+                aria-label="" exact="false">Privacy</a></div>
+            <div class="lg:mb-2 mb-5"><a href="/image-use-policy/"
+                class="nuxt-link-prefetched group cursor-pointer can-hover:hover:underline inline-block px-4 py-1 font-bold leading-none"
+                aria-label="" exact="false">Image Policy</a></div>
+            <div class="lg:mb-2 mb-5"><a href="/frequently-asked-questions/"
+                class="nuxt-link-prefetched group cursor-pointer can-hover:hover:underline inline-block px-4 py-1 font-bold leading-none"
+                aria-label="" exact="false">FAQ</a></div>
+            <div class="lg:mb-2 mb-5"><a href="/sitemap/"
+                class="nuxt-link-prefetched group cursor-pointer can-hover:hover:underline inline-block px-4 py-1 font-bold leading-none"
+                aria-label="" exact="false">Sitemap</a></div>
+          </div>
+          <div
+            class="lg:text-left lg:border-0 border-opacity-40 lg:pt-0 lg:px-0 px-4 pt-5 mb-4 text-center border-t border-black">
+            <div class="lg:inline-block lg:mb-0 block pr-4 mb-2"><span
+                class="text-gray-light font-bold inline-block pr-1">Version:</span><span> v1.0 </span></div>
+
+            <div class="lg:inline-block lg:mb-0 block mb-2"><span class="font-bold inline-block pr-1">Site
+                Managers:</span><span>MD</span></div>
+            <div class="ml-5 lg:inline-block lg:mb-0 block mb-2"><span class="font-bold inline-block pr-1">Site
+                Editors:</span><span>MJ</span></div>
+          </div>
+        </div>
+      </div>
+      <div class="border-t border-gray-900 pt-8 text-center text-white">
+        <p>&copy; 2025 Creationworlds.com. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <footer class="bg-black text-white relative z-20 print:px-4 print:border-t print:border-black" keep-alive="">
+      <div class="bg-black container px-4 pt-3 mx-auto">
+        <div class="footer-navigation lg:block lg:col-span-9 hidden col-span-12">
+          <div class="sm:grid grid-cols-9 gap-6">
+
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+
+</html>
