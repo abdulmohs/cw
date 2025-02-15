@@ -1,0 +1,27 @@
+@import "tailwindcss";
+
+/* Custom tooltip styles */
+.tooltip {
+  @apply relative inline-block;
+}
+
+.tooltip .tooltip-text {
+  @apply invisible absolute z-10 bg-gray-800 text-white text-sm px-3 py-2 rounded-md 
+         opacity-0 transition-opacity duration-300 whitespace-nowrap;
+  bottom: -35px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.tooltip .tooltip-text::after {
+  content: "";
+  @apply absolute border-8 border-transparent border-b-gray-800;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  rotate: 180deg;
+}
+
+.tooltip:hover .tooltip-text {
+  @apply visible opacity-100;
+}
